@@ -1,0 +1,192 @@
+% blog.tex
+
+\newcommand{\BlogTitle}{Blog techniczny}
+\newcommand{\BlogNote}{}
+\renewcommand{\BlogList}{}
+\AddBlogEntry
+  {Analiza wydajności arytmetyki JVM z perspektywy kodu bajtowego oraz instrukcji maszynowych x86}
+  {25 sty 2026}
+  {%
+    Studium przypadku weryfikujące mechanizmy "strength reduction" w maszynie wirtualnej HotSpot. Analiza obejmująca
+    transformację arytmetyki kodu bajtowego na natywne przesunięcia bitowe oraz operacje logiczne procesora x86.
+  }
+  {analiza-wydajności-arytmetyki-jvm-z-perspektywy-kodu-bajtowego-oraz-instrukcji-maszynowych-x86}
+\AddBlogEntry
+  {Zespolona interpretacja równania różniczkowego w ujęciu transformacji Fouriera}
+  {15 gru 2025}
+  {%
+    O tym, jak wzór Eulera zamienia równania różniczkowe na prostą impedancję cewki oraz dlaczego splot w dziedzinie
+    czasu to proste mnożenie w analizie Fouriera.
+  }
+  {zespolona-interpretacja-równania-różniczkowego-w-ujęciu-transformacji-fouriera}
+\AddBlogEntry
+  {Trochę o JWT i dlaczego nie jest taki świetny, jak się na pozór wydaje}
+  {20 lis 2025}
+  {O minusach technologii JWT i dlaczego czasami warto postawić na starą dobrą stanową sesję.}
+  {trochę-o-jwt-i-dlaczego-nie-jest-taki-świetny-jak-się-na-pozór-wydaje}
+\AddBlogEntry
+  {Szyfrowanie obrazów z wykorzystaniem chaotycznego atraktora Lorenza}
+  {22 cze 2025}
+  {Koncepcyjny sposób szyfrowania strumieniowego z wykorzystaniem punktów przestrzeni fazowej atraktora.}
+  {szyfrowanie-obrazów-z-wykorzystaniem-chaotycznego-atraktora-lorenza}
+\AddBlogEntry
+  {Prosty, bazujący na UDP i AES szyfrowany protokół transmisji obrazu}
+  {28 gru 2024}
+  {Opis zaprojektowanego i zaimplementowanego przeze mnie szyfrowanego protokołu transmisji obrazu.}
+  {prosty-bazujący-na-udp-i-aes-szyfrowany-protokół-transmisji-obrazu}
+\AddBlogEntry
+  {Podstawy przetwarzania i analizy częstotliwościowej sygnału audio}
+  {20 kwi 2024}
+  {%
+    Techniczne podstawy przetwarzania sygnału audio, reprezentacja matematyczna, funkcje sinusoidalne i piłokształtne
+    oraz analiza utworu muzycznego.
+  }
+  {podstawy-przetwarzania-i-analizy-częstotliwościowej-sygnału-audio}
+
+% education.tex
+
+\newcommand{\EducationTitle}{Edukacja}
+\newcommand{\ThesisLabel}{Praca dyplomowa}
+\renewcommand{\EducationList}{}
+\AddEducationEntry
+  {Politechnika Śląska \& NASK}
+  {Gliwice, Polska}
+  {Studia podyplomowe -- Cyber Science (Zarządzanie Cyberbezpieczeństwem)}
+  {2025 -- obecnie}
+  {%
+    Zaprojektowanie kryptograficznej architektury Zero Trust zgodnej z dyrektywą NIS2, wykorzystującej HashiCorp Vault,
+    post-kwantowe mTLS (ML-KEM/ML-DSA) oraz autorskie szyfrowanie na poziomie aplikacji w wysoko dostępnym środowisku
+    Kubernetes.
+  }
+\AddEducationEntry
+  {Politechnika Śląska}
+  {Gliwice, Polska}
+  {Magister inżynier informatyki; ocena: 5.0 (4.82)}
+  {2024 -- 2025}
+  {%
+    Analiza pozbawionej podpróbkowania diadycznego dyskretnej transformacji falkowej, wzbogaconej o nowatorski estymator
+    wag podpasm, w celu detekcji krawędzi na obrazach zniekształconych wysokoczęstotliwościowym szumem impulsowym.
+  }
+\AddEducationEntry
+  {Politechnika Śląska}
+  {Gliwice, Polska}
+  {Inżynier informatyki; ocena: 5.0 (4.67)}
+  {2020 -- 2024}
+  {%
+    Demonstracja możliwości komunikacyjnych w silnie rozproszonej infrastrukturze mikroserwisowej z wykorzystaniem
+    architektury sterowanej zdarzeniami Apache Kafka w komunikacji czasu rzeczywistego (aplikacja typu chat).
+  }
+
+% experience.tex
+
+\newcommand{\ExperienceTitle}{Doświadczenie zawodowe}
+\newcommand{\WorkHybrid}{hybrydowo}
+\renewcommand{\ExperienceList}{}
+\AddExperienceEntry
+  {Euvic}
+  {Gliwice, Polska (\WorkHybrid)}
+  {Stażysta Full Stack Developer}
+  {lip 2023 -- paź 2023}
+  {Next.js, Nest.js, PostgreSQL, MongoDB, Docker, AWS Cognito, Agile, Jira, współpraca z zespołem z UK}
+
+% header.tex
+
+\newcommand{\LabelEmail}{E-mail:}
+\newcommand{\LabelPortfolio}{Portfolio:}
+\newcommand{\LabelMobile}{Telefon:}
+\newcommand{\LabelGitHub}{GitHub:}
+\newcommand{\LabelLinkedIn}{LinkedIn:}
+
+% hobby.tex
+
+\newcommand{\TitleHobby}{Zainteresowania}
+\newcommand{\TextHobby}{
+  Entuzjasta systemów automatyki domowej i multimedialnej. Archeolog internetowy, miłośnik kina studyjnego i
+  alternatywnych brzmień. Aktywny archiwista i użytkownik nośników analogowych. Czytelnik literatury science fiction,
+  kosmologicznej i Lovecraft'owskiego horroru.
+}
+
+% honors_and_awards.tex
+
+\newcommand{\AwardsTitle}{Nagrody i wyróżnienia}
+\renewcommand{\AwardsList}{}
+\AddAwardEntry
+  {Stypendium Rektora za wybitne osiągnięcia naukowe}
+  {paź 2024}
+  {Politechnika Śląska -- znalezienie się w gronie 6\% najlepszych studentów na kierunku.}
+
+% projects.tex
+
+\newcommand{\ProjectsTitle}{Wybrane projekty}
+
+% research.tex
+
+\newcommand{\IndependentResearchTitle}{Niezależna działaność badawcza}
+\AddResearchEntry
+  {Steganografia w dziedzinie transformat falkowych}
+  {2026 -- obecnie}
+  {
+    Badania nad wykorzystaniem stałoprzecinkowej DTCWT, modulacji QAM oraz technik multimodalnych (detekcja transientów)
+    w celu ukrywania danych w sygnałach obrazowych.
+  }
+\AddResearchEntry
+  {Estymacja wag podpasm dekompozycji falkowej}
+  {2025}
+  {
+    Model redukcji szumu, w którym aproksymowana funkcja Gaussa wyznaczała wagi kolejnych podpasm dekompozycji falkowej.
+    Rozwiązanie to posłużyło jako podstawa pracy magisterskiej.
+  }
+
+% rodo.tex
+
+\newcommand{\TextRodo}{
+  Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji
+  (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. U. z 2018, poz. 1000) oraz zgodnie z
+  Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób
+  fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
+  dyrektywy 95/46/WE (RODO).
+}
+
+% skills.tex
+
+\newcommand{\SkillsTitle}{Technologie i umiejętności}
+\renewcommand{\SkillsList}{}
+\AddSkillEntry
+  {Architektura}
+  {
+    mikroserwisy, rozpraszanie usług stanowych, architektura hexagonalna (porty i adaptery), projektowanie API i
+    bibliotek (DI, IoC, silniki oparte o adnotacje), wzorce projektowe, SOLID
+  }
+\AddSkillEntry
+  {Testowanie}
+  {JUnit, Mockito, AssertJ, Testcontainers (testy integracyjne), TDD}
+\AddSkillEntry
+  {Backend}
+  {
+    JVM (Java, Kotlin), Spring Framework, Spring Boot, Maven, Gradle, Jetty, GraalVM (polyglot), RabbitMQ, JNI, Apache
+    Kafka
+  }
+\AddSkillEntry
+  {Bazy danych}
+  {MySQL, PostgreSQL, SQLite, Redis (KV, Pub/Sub), Cassandra, Neo4j}
+\AddSkillEntry
+  {Systemy wbudowane (embedded)}
+  {C, CMake, ESP-IDF (FreeRTOS), ESP32/ESP32-C3 (RISC-V), MQTT (Moquette), I2C, RS-232/485, mDNS, aktualizacje OTA}
+\AddSkillEntry
+  {R\&D i DSP}
+  {Python, OpenCV, PyWavelets, NumPy, SciPy, Pandas, \LaTeX}
+\AddSkillEntry
+  {Frontend, mobile i desktop}
+  {
+    TypeScript, JavaScript, Next.js, React (Redux Toolkit, TanStack Query), Android (Kotlin, Jetpack Compose), Java
+    Swing, Electron
+  }
+\AddSkillEntry
+  {Chmura i DevOps}
+  {
+    Docker, GitHub Actions, Linux (Debian), Z shell, GCP, OCI, Nginx, HashiCorp Consul (magazyn KV), Prometheus,
+    Grafana, Loki, K8S
+  }
+\AddSkillEntry
+  {Bezpieczeństwo}
+  {HashiCorp Vault, Cloudflare Zero Trust}

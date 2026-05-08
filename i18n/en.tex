@@ -1,0 +1,193 @@
+% blog.tex
+
+\newcommand{\BlogTitle}{Technical blog}
+\newcommand{\BlogNote}{(Article in Polish)}
+\renewcommand{\BlogList}{}
+\AddBlogEntry
+  {Performance analysis of JVM arithmetic (Bytecode \& x86)}
+  {Jan 25, 2026}
+  {%
+    Case study verifying "strength reduction" mechanisms in the HotSpot VM. Analysis of transforming bytecode arithmetic
+    into native bit shifts and x86 logical operations.
+  }
+  {analiza-wydajności-arytmetyki-jvm-z-perspektywy-kodu-bajtowego-oraz-instrukcji-maszynowych-x86}
+\AddBlogEntry
+  {Complex interpretation of differential equations (Fourier Transform)}
+  {Dec 15, 2025}
+  {%
+    How Euler's formula turns differential equations into simple coil impedance and why time-domain convolution is
+    simple multiplication in Fourier analysis. ESP32-based simulations.
+  }
+  {zespolona-interpretacja-równania-różniczkowego-w-ujęciu-transformacji-fouriera}
+\AddBlogEntry
+  {JWT: Why it's not as great as it seems}
+  {Nov 20, 2025}
+  {%
+    Discussing the drawbacks of JSON Web Tokens and why traditional stateful sessions are sometimes a better
+    architectural choice.
+  }
+  {trochę-o-jwt-i-dlaczego-nie-jest-taki-świetny-jak-się-na-pozór-wydaje}
+\AddBlogEntry
+  {Image encryption using the chaotic Lorenz attractor}
+  {Jun 22, 2025}
+  {Conceptual approach to a stream cipher utilizing phase space points of the Lorenz attractor.}
+  {szyfrowanie-obrazów-z-wykorzystaniem-chaotycznego-atraktora-lorenza}
+\AddBlogEntry
+  {Simple UDP and AES-based encrypted image transmission protocol}
+  {Dec 28, 2024}
+  {Design and implementation overview of a custom encrypted image transmission protocol.}
+  {prosty-bazujący-na-udp-i-aes-szyfrowany-protokół-transmisji-obrazu}
+\AddBlogEntry
+  {Fundamentals of processing and frequency analysis of audio signals}
+  {Apr 20, 2024}
+  {%
+    Technical basics of audio signal processing, mathematical representation, sinusoidal/sawtooth functions, and musical
+    track analysis.
+  }
+  {podstawy-przetwarzania-i-analizy-częstotliwościowej-sygnału-audio}
+
+% education.tex
+
+\newcommand{\EducationTitle}{Education}
+\newcommand{\ThesisLabel}{Thesis}
+\renewcommand{\EducationList}{}
+\AddEducationEntry
+  {Silesian University of Technology \& NASK}
+  {Gliwice, Poland}
+  {Postgraduate -- Cyber Science (Cyber Management)}
+  {2025 -- present}
+  {%
+    Designed a Zero Trust, NIS2-compliant cryptographic architecture leveraging HashiCorp Vault, post-quantum mTLS
+    (ML-KEM/ML-DSA), and custom application-level encryption in a highly available Kubernetes environment.
+  }
+\AddEducationEntry
+  {Silesian University of Technology}
+  {Gliwice, Poland}
+  {Master of Science in Computer Science; grade: 5.0 (4.82)}
+  {2024 -- 2025}
+  {%
+    Analysis of a discrete wavelet transform without dyadic subsampling, augmented with a novel subband weight
+    estimator, for edge detection in images heavily corrupted by high-frequency noise.
+  }
+\AddEducationEntry
+  {Silesian University of Technology}
+  {Gliwice, Poland}
+  {Bachelor of Engineering in Computer Science; grade: 5.0 (4.67)}
+  {2020 -- 2024}
+  {%
+    Demonstration of communication possibilities in a highly distributed microservice infrastructure using Apache Kafka
+    event-driven architecture in real-time communication (chat application).
+  }
+
+% experience.tex
+
+\newcommand{\ExperienceTitle}{Professional experience}
+\newcommand{\WorkHybrid}{hybrid}
+\renewcommand{\ExperienceList}{}
+\AddExperienceEntry
+  {Euvic}
+  {Gliwice, Poland (\WorkHybrid)}
+  {Full Stack Developer Intern}
+  {July 2023 -- October 2023}
+  {Next.js, Nest.js, PostgreSQL, MongoDB, Docker, AWS Cognito, Agile, Jira, UK-based international team}
+
+% header.tex
+
+\newcommand{\LabelEmail}{Email:}
+\newcommand{\LabelPortfolio}{Portfolio:}
+\newcommand{\LabelMobile}{Mobile:}
+\newcommand{\LabelGitHub}{GitHub:}
+\newcommand{\LabelLinkedIn}{LinkedIn:}
+
+% hobby.tex
+
+\newcommand{\TitleHobby}{Hobbies \& interests}
+\newcommand{\TextHobby}{
+  Home automation and multimedia automation systems enthusiast. Internet archaeologist, lover of arthouse cinema and
+  alternative sounds. Active archivist and user of analog media. Reader of science fiction, cosmological literature, and
+  Lovecraftian horror.
+}
+
+% honors_and_awards.tex
+
+\newcommand{\AwardsTitle}{Honors \& awards}
+\renewcommand{\AwardsList}{}
+\AddAwardEntry
+  {Rector's Scholarship for outstanding academic performance}
+  {Oct 2024}
+  {Silesian University of Technology -- ranked in the top 6\% of students in the major.}
+
+% projects.tex
+
+\newcommand{\ProjectsTitle}{Selected projects}
+
+% research.tex
+
+\newcommand{\IndependentResearchTitle}{Independent research}
+\renewcommand{\ResearchList}{}
+\AddResearchEntry
+  {Steganography in complex wavelet domains}
+  {2026 -- present}
+  {
+    Research on leveraging fixed-point DTCWT, QAM modulation, and multimodal techniques (transients detection) for data
+    hiding in image signals.
+  }
+\AddResearchEntry
+  {Subband weight estimation in wavelet decomposition}
+  {2025}
+  {
+    A noise reduction model utilizing an approximated Gaussian function to determine the weights of successive
+    wavelet decomposition subbands. This approach formed the basis of the master's thesis.
+  }
+
+% rodo.tex
+
+\newcommand{\TextRodo}{
+  I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to
+  the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation
+  (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (General Data Protection Regulation).
+}
+
+% skills.tex
+
+\newcommand{\SkillsTitle}{Technologies \& skills}
+\renewcommand{\SkillsList}{}
+\AddSkillEntry
+  {Architecture}
+  {
+    microservices, distributed stateful services, hexagonal architecture (ports \& adapters), API \& library design
+    (DI, IoC, annotation-driven engines), design patterns, SOLID
+  }
+\AddSkillEntry
+  {Backend}
+  {
+    JVM (Java, Kotlin), Spring Framework, Spring Boot, Maven, Gradle, Jetty, GraalVM (polyglot), RabbitMQ, JNI, Apache
+    Kafka
+  }
+\AddSkillEntry
+  {Testing}
+  {JUnit, Mockito, AssertJ, Testcontainers (integration tests), TDD}
+\AddSkillEntry
+  {Databases}
+  {MySQL, PostgreSQL, SQLite, Redis (KV, Pub/Sub), Cassandra, Neo4j}
+\AddSkillEntry
+  {Embedded \& IoT}
+  {C, CMake, ESP-IDF (FreeRTOS), ESP32/ESP32-C3 (RISC-V), MQTT (Moquette), I2C, mDNS, OTA updates}
+\AddSkillEntry
+  {R\&D \& DSP}
+  {Python, OpenCV, PyWavelets, NumPy, SciPy, Pandas, \LaTeX}
+\AddSkillEntry
+  {Frontend, Mobile \& Desktop}
+  {
+    TypeScript, JavaScript, Next.js, React (Redux Toolkit, TanStack Query), Android (Kotlin, Jetpack Compose), Java
+    Swing, Electron
+  }
+\AddSkillEntry
+  {Cloud \& DevOps}
+  {
+    Docker, GitHub Actions, Linux (Debian), Z shell, GCP, OCI, Nginx, HashiCorp Consul (KV store), Prometheus, Grafana,
+    Loki, K8S
+  }
+\AddSkillEntry
+  {Security}
+  {HashiCorp Vault, Cloudflare Zero Trust}

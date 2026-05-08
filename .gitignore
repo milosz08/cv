@@ -1,0 +1,7 @@
+*.aux
+*.fls
+*.log
+*.fdb*
+*.out
+
+cv_*.pdf
