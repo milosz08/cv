@@ -1,6 +1,6 @@
 # CV
 
-LaTeX source from my resume. Multi-language support.
+LaTeX source from my CV. Multi-language support.
 
 ## Author
 
