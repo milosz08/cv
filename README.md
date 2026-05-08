@@ -1,4 +1,4 @@
-# CV (resume)
+# CV
 
 LaTeX source from my resume. Multi-language support.
 
