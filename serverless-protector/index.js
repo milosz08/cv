@@ -11,7 +11,7 @@ exports.serveCV = async (req, res) => {
     return res.status(403).end();
   }
   const lang = req.query.lang === 'en' ? 'en' : FALLBACK_LANG;
-  const fileName = `cv_miloszgilga_${lang}.pdf`;
+  const fileName = `cv_msc_eng_miloszgilga_${lang}.pdf`;
   try {
     const options = {
       version: 'v4',
