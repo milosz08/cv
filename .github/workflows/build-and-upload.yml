@@ -5,8 +5,9 @@ on:
     branches:
       - master
     paths:
-      - '**.tex'
-      - '.github/workflows/build-and-upload.yml'
+      - "**.tex"
+      - "ci_**"
+      - ".github/workflows/build-and-upload.yml"
 
 env:
   USER_NAME: "miloszgilga"
