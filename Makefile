@@ -55,7 +55,7 @@ infra-apply:
 infra-url:
 	@cd terraform && terraform output cloud_function_url
 
-.PHONY: build-worker
-build-worker:
+.PHONY: generate-worker
+generate-worker:
 	@cd waf && chmod +x generate_worker.sh
 	@cd waf && SECRET_TOKEN=$(CF_SECRET_TOKEN) ./generate_worker.sh

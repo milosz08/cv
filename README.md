@@ -1,6 +1,23 @@
 # CV
 
-Source code of my CV, build with LaTeX. Automatically build & deploying into Google Cloud Storage bucket.
+Source code of my CV, build with LaTeX. Automatically build & deploying into Google Cloud Storage bucket. Bot
+protection with GCP serverless function and Cloudflare worker (with Cloudflare challenge page).
+
+## Commands
+
+```js
+$ make build            // build all LaTeX sources
+$ make watch-[lang]     // run LaTeX dev mode for specific language, ex. watch-pl, watch-en
+$ make watch            // run LaTeX dev mode for all languages
+$ make clean            // remove LaTeX compiled files
+
+$ make infra-init       // initialize terraform GCP infra
+$ make infra-plan       // prepare terraform GCP infra
+$ make infra-apply      // deploy and apply terraform GCP infra
+$ make infra-url        // print serverless function URL
+
+$ make generate-worker  // generate Cloudflare worker from template
+```
 
 ## Author
 
