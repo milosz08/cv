@@ -121,6 +121,71 @@
 % projects.tex
 
 \newcommand{\ProjectsTitle}{Wybrane projekty}
+\renewcommand{\ProjectsList}{}
+\AddProjectEntry
+  {JWizard: wysokoprzepustowa platforma multimedialna Discord}
+  {2022 -- obecnie}
+  {%
+    \item
+      Migracja od monolitu (Spring Boot), przez modularny monolit (Kotlin) po docelowe mikroserwisy (Java 21, Project
+      Loom).
+    \item
+      Rezygnacja z gotowych frameworków na rzecz autorskich rozwiązań (własne ładowarki komponentów), skracając czas
+      ładowania z kilkudziesięciu do zaledwie kilku sekund.
+    \item
+      Redukcja ruchu wewnętrznego dzięki zastosowaniu binarnego protokołu Protobuf zamiast standardowego protokołu JSON.
+    \item
+      Warstwa kliencka w architekturze monorepo, współdzielone paczki UI z aplikacjami Next.js (SSR) oraz React (CSR).
+  }
+  {%
+    mikroserwisy, Java 21, GraalVM, Jetty, Guice, WebSocket, REST, Protobuf, PostgreSQL, Redis (KV, PubSub), Neo4j,
+    RabbitMQ, JUnit, AssertJ, Testcontainers, Discord API, Discord Gateway, Next.js, React, shadcn/ui, Sentry, Docker
+  }
+  {jwizard-bot}
+\AddProjectEntry
+  {Inteligentny dzwonek (rozproszona platforma IoT)}
+  {2026 -- obecnie}
+  {%
+    \item
+      Moduł ESP32-C3 pod obwód 230V (przekaźniki SSR, transoptor, Ethernet W5500) w architekturze \textit{fail-secure}
+      (sprzętowe działanie dzwonka nawet przy awarii MCU).
+    \item
+      Lekki serwer Java odciążający moduł IoT z panelem administracyjnym i systemem uprawnień. Dwukierunkowy ruch
+      (WebSockets) wystawiony na świat przez tunele Cloudflare Zero Trust.
+  }
+  {C, CMake, ESP-IDF, FreeRTOS, Java, JAX-RS (Jersey), MQTT (Moquette), WebSocket, SQLite, Cloudflare Tunnel}
+  {milosz08/intelligent-doorbell-system}
+\AddProjectEntry
+  {System automatyki kina domowego}
+  {2025 -- 2026}
+  {%
+    \item
+      Autorski sterownik na bazie ESP32 z obsługą modułu Ethernet (SPI) oraz magistrali RS-232/485 do sterowania
+      projektorem i ekranem projekcyjnym.
+    \item
+      Zastąpienie blokującego HTTP/SSE szyfrowaną, asynchroniczną komunikacją WebSocket, zintegrowaną z systemem
+      kolejkowania zdarzeń (FreeRTOS).
+    \item
+      Automatyzacja generowania kluczy i obrazów partycji LittleFS \textit{w locie} (Python) oraz dedykowana aplikacja
+      sterująca (Android/Kotlin).
+  }
+  {C, CMake, ESP-IDF, FreeRTOS, SPI, I2C, RS-232/485, Python, Kotlin (Android, Jetpack Compose), WebSocket}
+  {milosz08/home-theater-automation-system}
+\AddProjectEntry
+  {Rozproszony menedżer lokalnych notyfikacji SMTP}
+  {2025 -- 2026}
+  {%
+    \item
+      Implementacja serwera \textit{Dummy SMTP} do przechwytywania ruchu oraz wdrożenie komunikacji po SSE z
+      szyfrowaniem kopertowym (AES, RSA) wraz z Cloudflare Tunnel.
+    \item
+      Zastąpienie Spring Boota czystym Jetty w serwerze brzegowym zredukowało zużycie pamięci o 50\%.
+    \item
+      Wzorzec \textit{backend-to-frontend}, całkowicie izolujący procesy kryptograficzne i sesyjne od warstwy
+      renderowania UI.
+  }
+  {Java, Jetty, SQLite, SMTP, SSE, AES/RSA (szyfrowanie kopertowe), React, Electron (IPC), Cloudflare Tunnel}
+  {milosz08/event-proxy-system}
 
 % research.tex
 

@@ -124,6 +124,72 @@
 % projects.tex
 
 \newcommand{\ProjectsTitle}{Selected projects}
+\renewcommand{\ProjectsList}{}
+\AddProjectEntry
+  {JWizard: high-throughput Discord multimedia platform}
+  {2022 -- present}
+  {%
+    \item
+      Migrated from a monolith (Spring Boot) through a modular monolith (Kotlin) to a final microservices architecture
+      (Java 21, Project Loom).
+    \item
+      Replaced heavy frameworks with custom \textit{bare-bone} solutions (custom component loaders), reducing cold-start
+      times from dozens of seconds to just a few.
+    \item
+      Reduced internal cluster traffic by implementing the binary Protobuf protocol instead of standard JSON.
+    \item
+      Developed a client-side layer in a monorepo architecture, sharing UI packages between Next.js (SSR) and React
+      (CSR) applications.
+  }
+  {%
+    Microservices, Java 21, GraalVM, Jetty, Guice, WebSocket, REST, Protobuf, PostgreSQL, Redis (KV, PubSub), Neo4j,
+    RabbitMQ, JUnit, AssertJ, Testcontainers, Discord API, Discord Gateway, Next.js, React, shadcn/ui, Sentry, Docker
+  }
+  {jwizard-bot}
+\AddProjectEntry
+  {Intelligent doorbell: distributed IoT platform}
+  {2026 -- present}
+  {%
+    \item
+      Designed an ESP32-C3 IoT module for 230V circuits (SSR relays, optocoupler, Ethernet W5500) featuring a
+      \textit{fail-secure} architecture (doorbell remains functional even during MCU failure).
+    \item
+      Developed a lightweight Java relay server to offload the IoT module, including an admin panel and RBAC system.
+      Real-time bidirectional traffic (WebSockets) exposed via Cloudflare Zero Trust tunnels.
+  }
+  {C, CMake, ESP-IDF, FreeRTOS, Java, JAX-RS (Jersey), MQTT (Moquette), WebSocket, SQLite, Cloudflare Tunnel}
+  {milosz08/intelligent-doorbell-system}
+\AddProjectEntry
+  {Home theater automation system}
+  {2025 -- 2026}
+  {%
+    \item
+      Engineered a custom controller based on ESP32 with Ethernet support (SPI) and RS-232/485 bus communication to
+      control projectors and projection screens.
+    \item
+      Overcame blocking HTTP/SSE limitations by implementing encrypted, asynchronous WebSocket communication integrated
+      with the RTOS event queue (FreeRTOS).
+    \item
+      Automated on-the-fly key and LittleFS partition image generation (Python) and developed a dedicated management app
+      (Android/Kotlin).
+  }
+  {C, CMake, ESP-IDF, FreeRTOS, SPI, I2C, RS-232/485, Python, Kotlin (Android, Jetpack Compose), WebSocket}
+  {milosz08/home-theater-automation-system}
+\AddProjectEntry
+  {Distributed local SMTP notification manager}
+  {2025 -- 2026}
+  {%
+    \item
+      Implemented a \textit{Dummy SMTP} server for traffic interception and deployed real-time SSE telemetry with
+      envelope encryption (AES, RSA) via Cloudflare Tunnels.
+    \item
+      Replaced Spring Boot with pure Jetty on the edge server, resulting in a 50\% reduction in memory footprint.
+    \item
+      Utilized a \textit{backend-to-frontend} pattern to completely isolate cryptographic and session processes from the
+      UI rendering layer.
+  }
+  {Java, Jetty, SQLite, SMTP, SSE, AES/RSA (Envelope Encryption), React, Electron (IPC), Cloudflare Tunnel}
+  {milosz08/event-proxy-system}
 
 % research.tex
 

@@ -111,7 +111,23 @@
 \def\UnpackResearchEntry#1{\ProcessResearchEntry#1}
 \def\ProcessResearchEntry#1|#2|#3{%
   \resumeGeneralItem{#1}{#2}{#3}
-  \vspace{2pt}
+}
+
+% for projects
+\newcommand{\ProjectsList}{}
+\newcommand{\AddProjectEntry}[5]{\listadd{\ProjectsList}{{#1}|{#2}|{#3}|{#4}|{#5}}}
+\def\UnpackProjectEntry#1{\ProcessProjectEntry#1}
+\def\ProcessProjectEntry#1|#2|#3|#4|#5{%
+  \resumeGeneralItem
+  {\href{https://github.com/#5}{#1}}
+  {#2}
+  {%
+    \begin{itemize}[nosep, leftmargin=1.5em, label=$\bullet$]
+      #3
+    \end{itemize}
+  }
+  \item
+    \small{\textit{#4}}
 }
 
 % for skills
