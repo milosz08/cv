@@ -19,9 +19,6 @@ jobs:
       contents: read
       id-token: write
 
-    container:
-      image: texlive/texlive:mini
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
