@@ -1,6 +1,7 @@
 {
-    "recommendations": [
-        "k--kato.intellij-idea-keybindings",
-        "mathematic.vscode-pdf",
-    ]
+  "recommendations": [
+    "hashicorp.terraform",
+    "k--kato.intellij-idea-keybindings",
+    "mathematic.vscode-pdf",
+  ]
 }
