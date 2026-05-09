@@ -5,9 +5,10 @@ on:
     branches:
       - master
     paths:
+      - ".github/workflows/build-and-upload.yml"
       - "**.tex"
       - "ci_**"
-      - ".github/workflows/build-and-upload.yml"
+      - "Makefile"
 
 env:
   USER_NAME: "msc_eng_miloszgilga"
