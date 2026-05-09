@@ -5,7 +5,7 @@ protection with GCP serverless function and Cloudflare worker (with Cloudflare c
 
 ## Commands
 
-```js
+```json
 $ make build            // build all LaTeX sources
 $ make watch-[lang]     // run LaTeX dev mode for specific language, ex. watch-pl, watch-en
 $ make watch            // run LaTeX dev mode for all languages
