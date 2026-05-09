@@ -5,18 +5,18 @@ protection with GCP serverless function and Cloudflare worker (with Cloudflare c
 
 ## Commands
 
-```json
-$ make build            // build all LaTeX sources
-$ make watch-[lang]     // run LaTeX dev mode for specific language, ex. watch-pl, watch-en
-$ make watch            // run LaTeX dev mode for all languages
-$ make clean            // remove LaTeX compiled files
+```sh
+$ make build            # build all LaTeX sources
+$ make watch-[lang]     # run LaTeX dev mode for specific language, ex. watch-pl, watch-en
+$ make watch            # run LaTeX dev mode for all languages
+$ make clean            # remove LaTeX compiled files
 
-$ make infra-init       // initialize terraform GCP infra
-$ make infra-plan       // prepare terraform GCP infra
-$ make infra-apply      // deploy and apply terraform GCP infra
-$ make infra-url        // print serverless function URL
+$ make infra-init       # initialize terraform GCP infra
+$ make infra-plan       # prepare terraform GCP infra
+$ make infra-apply      # deploy and apply terraform GCP infra
+$ make infra-url        # print serverless function URL
 
-$ make generate-worker  // generate Cloudflare worker from template
+$ make generate-worker  # generate Cloudflare worker from template
 ```
 
 ## Author
