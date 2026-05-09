@@ -26,33 +26,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Compile LaTeX in minimal Docker container
         run: |
-          tlmgr update --self
-          tlmgr install \
-            latexmk \
-            fontspec \
-            luaotfload \
-            selnolig \
-            babel-polish \
-            babel-english \
-            titlesec \
-            enumitem \
-            fancyhdr \
-            etoolbox \
-            setspace \
-            marvosym \
-            preprint \
-            tools \
-            hyperref \
-            graphics \
-            verbatim \
-            symbol
-
-      - name: Install dependencies and compile LaTeX
-        run: |
-          latexmk -pdflua -interaction=nonstopmode -halt-on-error cv_pl.tex
-          latexmk -pdflua -interaction=nonstopmode -halt-on-error cv_en.tex
+          docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace debian:bookworm-slim bash -c "
+            apt-get update && apt-get install -y --no-install-recommends \
+              texlive-luatex \
+              texlive-latex-recommended \
+              texlive-latex-extra \
+              texlive-fonts-recommended \
+              texlive-lang-polish \
+              texlive-lang-english \
+              latexmk \
+              ca-certificates && \
+            latexmk -pdf -interaction=nonstopmode -halt-on-error cv_pl.tex && \
+            latexmk -pdf -interaction=nonstopmode -halt-on-error cv_en.tex
+          "
 
       - name: Rename PDF files
         run: |
