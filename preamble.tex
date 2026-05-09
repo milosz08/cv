@@ -39,7 +39,7 @@
 \setstretch{0.9}
 
 \titleformat{\section}{
-  \vspace{-2pt}\scshape\raggedright\large
+  \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % #1: name, #2: localization, #3: title/role, #4: date
@@ -125,9 +125,10 @@
     \begin{itemize}[nosep, leftmargin=1.5em, label=$\bullet$]
       #3
     \end{itemize}
+    \vspace{3pt}
+    {\small{\textit{#4}}}
   }
-  \item
-    \small{\textit{#4}}
+  \vspace{3pt}
 }
 
 % for skills
