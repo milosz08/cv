@@ -1,6 +1,6 @@
 # CV
 
-Source code of my CV, build with LaTeX.
+Source code of my CV, build with LaTeX. Automatically build & deploying into Google Cloud Storage bucket.
 
 ## Author
 
