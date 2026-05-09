@@ -2,4 +2,4 @@
 
 set -e
 
-docker run --rm -v "$PWD:/workspace" -w /workspace debian:bookworm-slim ./ci_compile
+docker run --rm -v "$PWD:/workspace" -w /workspace -e DEBIAN_FRONTEND=noninteractive ubuntu:24.10 ./ci_compile
