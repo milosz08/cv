@@ -18,47 +18,50 @@
 \usepackage[T1]{fontenc}
 \usepackage{tabularx}
 \usepackage{etoolbox}
+\usepackage{setspace}
 
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.53in}
-\addtolength{\evensidemargin}{-0.53in}
-\addtolength{\textwidth}{1.1in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.1in}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+\setstretch{0.9}
+
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-2pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % #1: name, #2: localization, #3: title/role, #4: date
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}
   \item
+    \vspace{-2pt}
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\small #1} & \textit{\small #2} \\
       \small #3 & \textit{\small #4} \\
     \end{tabular*}
-    \vspace{-7pt}
+    \vspace{-2pt}
 }
 
 % #1: title, #2: date, #3: description/content
 \newcommand{\resumeGeneralItem}[3]{
   \item
-    \vspace{-4pt}
+    \vspace{-2pt}
     \begin{tabularx}{0.97\textwidth}[t]{@{}X >{\raggedleft\arraybackslash}p{80pt}@{}}
       \textbf{\small #1} & \textit{\small #2} \\
       \multicolumn{2}{@{}p{0.97\textwidth}@{}}{\small #3}
     \end{tabularx}
-    \vspace{2pt}
+    \vspace{-2pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -78,9 +81,9 @@
 \def\UnpackEducationEntry#1{\ProcessEducationEntry#1}
 \def\ProcessEducationEntry#1|#2|#3|#4|#5{%
   \resumeSubheading{#1}{#2}{#3}{#4}
-  \vspace{-1pt}
-  \item \small{\textit{\textbf{\ThesisLabel:} #5}}
-  \vspace{2pt}
+  \vspace{-3pt}
+  \item
+    \small{\textit{\textbf{\ThesisLabel:} #5}}
 }
 
 % for experience
@@ -89,9 +92,9 @@
 \def\UnpackExperienceEntry#1{\ProcessExperienceEntry#1}
 \def\ProcessExperienceEntry#1|#2|#3|#4|#5{%
   \resumeSubheading{#1}{#2}{#3}{#4}
-  \vspace{-1pt}
-  \item \small{\textit{#5}}
-  \vspace{2pt}
+  \vspace{-3pt}
+  \item
+    \small{\textit{#5}}
 }
 
 % for honors and awards
@@ -100,7 +103,6 @@
 \def\UnpackAwardEntry#1{\ProcessAwardEntry#1}
 \def\ProcessAwardEntry#1|#2|#3{%
   \resumeGeneralItem{#1}{#2}{#3}
-  \vspace{2pt}
 }
 
 % for research
