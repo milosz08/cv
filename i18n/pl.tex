@@ -99,7 +99,7 @@
 % hobby.tex
 
 \newcommand{\TitleHobby}{Zainteresowania}
-\newcommand{\TextHobby}{
+\newcommand{\TextHobby}{%
   Entuzjasta systemów automatyki domowej i multimedialnej. Archeolog internetowy, miłośnik kina studyjnego i
   alternatywnych brzmień. Aktywny archiwista i użytkownik nośników analogowych. Czytelnik literatury science fiction,
   kosmologicznej i Lovecraft'owskiego horroru.
@@ -124,14 +124,14 @@
 \AddResearchEntry
   {Steganografia w dziedzinie transformat falkowych}
   {2026 -- obecnie}
-  {
+  {%
     Badania nad wykorzystaniem stałoprzecinkowej DTCWT, modulacji QAM oraz technik multimodalnych (detekcja transientów)
     w celu ukrywania danych w sygnałach obrazowych.
   }
 \AddResearchEntry
   {Eksperymentalny algorytm szyfrowania strumieniowego (atraktor Lorenza)}
   {2025}
-  {
+  {%
     Kryptosystem oparty na teorii chaosu. Zastosowano numeryczne solvery równań różniczkowych i analizę wykładnika
     Lapunowa do generacji kluczy pseudolosowych. Skuteczność szyfrowania obrazów dowiedziono analizą widmową 2D-FFT.
   }
@@ -145,14 +145,14 @@
 \AddResearchEntry
   {Autorski protokół strumieniowania wideo}
   {2023}
-  {
+  {%
     Zaprojektowanie szyfrowanego (AES-CTR) protokołu czasu rzeczywistego opartego na UDP. Zaimplementowano autorską
     fragmentację uwzględniającą limity MTU oraz obsługę utraty pakietów w warstwie aplikacji (L7).
   }
 
 % rodo.tex
 
-\newcommand{\TextRodo}{
+\newcommand{\TextRodo}{%
   Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji
   (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. U. z 2018, poz. 1000) oraz zgodnie z
   Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób
@@ -166,13 +166,13 @@
 \renewcommand{\SkillsList}{}
 \AddSkillEntry
   {Architektura}
-  {
+  {%
     mikroserwisy, rozpraszanie usług stanowych, architektura heksagonalna, projektowanie API i bibliotek (DI, IoC,
     silniki oparte o adnotacje), projektowanie protokołów (TCP/UDP), wzorce projektowe, SOLID
   }
 \AddSkillEntry
   {Backend}
-  {
+  {%
     JVM (Java 21, Kotlin), Spring Framework, Spring Boot, Maven, Gradle, Jetty, GraalVM (polyglot), RabbitMQ, Apache
     Kafka
   }
@@ -196,7 +196,7 @@
   {TypeScript, Next.js, React (Redux Toolkit, TanStack Query), Android (Kotlin, Jetpack Compose), Electron}
 \AddSkillEntry
   {DevOps, chmura i bezpieczeństwo}
-  {
+  {%
     HashiCorp Vault (GCP KMS auto-unseal), Cloudflare Zero Trust, Docker, GitOps (GitHub Actions), GCP, OCI, Linux
     (Debian), Prometheus, Grafana, K8S (podstawy)
   }

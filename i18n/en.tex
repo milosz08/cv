@@ -102,7 +102,7 @@
 % hobby.tex
 
 \newcommand{\TitleHobby}{Hobbies \& interests}
-\newcommand{\TextHobby}{
+\newcommand{\TextHobby}{%
   Home automation and multimedia automation systems enthusiast. Internet archaeologist, lover of arthouse cinema and
   alternative sounds. Active archivist and user of analog media. Reader of science fiction, cosmological literature, and
   Lovecraftian horror.
@@ -128,14 +128,14 @@
 \AddResearchEntry
   {Steganography in complex wavelet domains}
   {2026 -- present}
-  {
+  {%
     Research on leveraging fixed-point DTCWT, QAM modulation, and multimodal techniques (transients detection) for data
     hiding in image signals.
   }
 \AddResearchEntry
   {Experimental stream cipher (Lorenz attractor)}
   {2025}
-  {
+  {%
     Custom cryptosystem leveraging chaos theory. Utilized differential equation solvers and Lyapunov exponents for
     pseudo-random keystream generation. Image encryption security was mathematically validated via 2D-FFT spectral
     analysis.
@@ -143,21 +143,21 @@
 \AddResearchEntry
   {Subband weight estimation in wavelet decomposition}
   {2024 -- 2025}
-  {
+  {%
     A noise reduction model utilizing an approximated Gaussian function to determine the weights of successive
     wavelet decomposition subbands. This approach formed the basis of the master's thesis.
   }
 \AddResearchEntry
   {Custom encrypted video streaming protocol}
   {2023}
-  {
+  {%
     Engineered a low-latency, encrypted (AES-CTR) real-time video protocol over UDP. Implemented application-layer (L7)
     packet fragmentation respecting MTU limits.
   }
 
 % rodo.tex
 
-\newcommand{\TextRodo}{
+\newcommand{\TextRodo}{%
   I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to
   the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation
   (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (General Data Protection Regulation).
@@ -169,13 +169,13 @@
 \renewcommand{\SkillsList}{}
 \AddSkillEntry
   {Architecture}
-  {
+  {%
     microservices, distributed stateful services, hexagonal architecture, API \& library design (DI, IoC,
     annotation-driven engines), custom protocol design (TCP/UDP), design patterns, SOLID
   }
 \AddSkillEntry
   {Backend}
-  {
+  {%
     JVM (Java 21, Kotlin), Spring Framework, Spring Boot, Maven, Gradle, Jetty, GraalVM (polyglot), RabbitMQ, Apache
     Kafka
   }
@@ -199,7 +199,7 @@
   {TypeScript, Next.js, React (Redux Toolkit, TanStack Query), Android (Kotlin, Jetpack Compose), Electron}
 \AddSkillEntry
   {DevOps, cloud \& security}
-  {
+  {%
     HashiCorp Vault (GCP KMS auto-unseal), Cloudflare Zero Trust, Docker, GitOps (GitHub Actions), GCP, OCI, Linux
     (Debian), Prometheus, Grafana, K8S (basics)
   }
