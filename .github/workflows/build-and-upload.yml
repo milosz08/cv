@@ -28,6 +28,8 @@ jobs:
         run: |
           chmod +x ci_compile.sh ci_build.sh
           ./ci_build.sh
+        env:
+          CV_PHONE_NUMBER: ${{ secrets.CV_PHONE_NUMBER }}
 
       - name: Create PDF files directory
         run: |

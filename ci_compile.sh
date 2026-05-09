@@ -4,6 +4,7 @@ set -e
 
 apt-get update
 apt-get install -y --no-install-recommends \
+  make \
   texlive-latex-recommended \
   texlive-latex-extra \
   texlive-fonts-recommended \
@@ -14,5 +15,4 @@ apt-get install -y --no-install-recommends \
   cm-super \
   lmodern
 
-latexmk -pdf -interaction=nonstopmode -halt-on-error cv_pl.tex
-latexmk -pdf -interaction=nonstopmode -halt-on-error cv_en.tex
+make build
