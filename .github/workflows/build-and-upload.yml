@@ -26,8 +26,8 @@ jobs:
 
       - name: Compile LaTeX
         run: |
-          chmod +x ci_compile ci_build
-          ./ci_build
+          chmod +x ci_compile.sh ci_build.sh
+          ./ci_build.sh
 
       - name: Create PDF files directory
         run: |
