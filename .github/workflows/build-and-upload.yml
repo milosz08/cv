@@ -1,0 +1,73 @@
+name: Build and upload to GCS (multi languages)
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**.tex'
+      - '.github/workflows/deploy-cv.yml'
+
+env:
+  USER_NAME: "miloszgilga"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    container:
+      image: texlive/texlive:mini
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          tlmgr update --self
+          tlmgr install \
+            latexmk \
+            fontspec \
+            luaotfload \
+            selnolig \
+            babel-polish \
+            babel-english \
+            titlesec \
+            enumitem \
+            fancyhdr \
+            etoolbox \
+            setspace \
+            marvosym \
+            preprint \
+            tools \
+            hyperref \
+            graphics \
+            verbatim \
+            symbol
+
+      - name: Install dependencies and compile LaTeX
+        run: |
+          latexmk -pdflua -interaction=nonstopmode -halt-on-error cv_pl.tex
+          latexmk -pdflua -interaction=nonstopmode -halt-on-error cv_en.tex
+
+      - name: Rename PDF files
+        run: |
+          mv cv_pl.pdf "cv_${{ env.USER_NAME }}_pl.pdf"
+          mv cv_en.pdf "cv_${{ env.USER_NAME }}_en.pdf"
+
+      - name: Auth to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Upload to GCS
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: "cv_${{ env.USER_NAME }}_*.pdf"
+          destination: ${{ secrets.GCS_BUCKET_NAME }}
+          parent: false
+          gzip: false
