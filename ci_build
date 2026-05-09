@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+docker run --rm -v "$PWD:/workspace" -w /workspace debian:bookworm-slim ./compile.sh

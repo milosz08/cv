@@ -23,26 +23,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX in minimal Docker container
+      - name: Compile LaTeX
         run: |
-          docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace debian:bookworm-slim bash -c "
-            apt-get update && apt-get install -y --no-install-recommends \
-              texlive-luatex \
-              texlive-latex-recommended \
-              texlive-latex-extra \
-              texlive-fonts-recommended \
-              texlive-lang-polish \
-              texlive-lang-english \
-              latexmk \
-              ca-certificates && \
-            latexmk -pdf -interaction=nonstopmode -halt-on-error cv_pl.tex && \
-            latexmk -pdf -interaction=nonstopmode -halt-on-error cv_en.tex
-          "
+          chmod +x ci_compile ci_build
+          ./ci_build
+
+      - name: Create PDF files directory
+        run: |
+          mkdir -p output_cv
 
       - name: Rename PDF files
         run: |
-          mv cv_pl.pdf "cv_${{ env.USER_NAME }}_pl.pdf"
-          mv cv_en.pdf "cv_${{ env.USER_NAME }}_en.pdf"
+          mv cv_pl.pdf "output_cv/cv_${{ env.USER_NAME }}_pl.pdf"
+          mv cv_en.pdf "output_cv/cv_${{ env.USER_NAME }}_en.pdf"
 
       - name: Auth to GCP
         uses: google-github-actions/auth@v2
@@ -52,7 +45,6 @@ jobs:
       - name: Upload to GCS
         uses: google-github-actions/upload-cloud-storage@v2
         with:
-          path: "cv_${{ env.USER_NAME }}_*.pdf"
+          path: "output_cv"
           destination: ${{ secrets.GCS_BUCKET_NAME }}
           parent: false
-          gzip: false
