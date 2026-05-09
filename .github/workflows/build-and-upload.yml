@@ -10,7 +10,7 @@ on:
       - ".github/workflows/build-and-upload.yml"
 
 env:
-  USER_NAME: "miloszgilga"
+  USER_NAME: "msc_eng_miloszgilga"
 
 jobs:
   build-and-deploy:
