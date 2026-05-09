@@ -49,3 +49,4 @@ jobs:
           path: "output_cv"
           destination: ${{ secrets.GCS_BUCKET_NAME }}
           parent: false
+          process_gcloudignore: false
