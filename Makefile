@@ -9,7 +9,7 @@ export
 
 .PHONY: generate-env-tex
 generate-env-tex:
-	@echo "\\newcommand{\\VARPHONE}{$(CV_PHONE_NUMBER)}" > env.tex
+	@printf '\\newcommand{\\VARPHONE}{%s}\n' "$(CV_PHONE_NUMBER)" > env.tex
 
 .PHONY: build
 build: generate-env-tex
