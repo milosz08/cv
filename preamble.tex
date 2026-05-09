@@ -19,6 +19,7 @@
 \usepackage{tabularx}
 \usepackage{etoolbox}
 \usepackage{setspace}
+\usepackage{xstring}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -38,9 +39,20 @@
 
 \setstretch{0.9}
 
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 0},
+  hidelinks
+}
+
 \titleformat{\section}{
   \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\phonelink}[1]{%
+  \StrSubstitute{#1}{ }{}[\cleannumber]
+  \href{tel:\cleannumber}{#1}%
+}
 
 % #1: name, #2: localization, #3: title/role, #4: date
 \newcommand{\resumeSubheading}[4]{
@@ -141,4 +153,5 @@
   \vspace{2pt}
 }
 
+\input{env}
 \input{variables}
