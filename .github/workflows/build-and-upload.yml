@@ -9,6 +9,7 @@ on:
       - "**.tex"
       - "ci_**"
       - "Makefile"
+  workflow_dispatch:
 
 env:
   USER_NAME: "msc_eng_miloszgilga"
