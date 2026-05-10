@@ -3,6 +3,9 @@
 Source code of my CV, build with LaTeX. Automatically build & deploying into Google Cloud Storage bucket. Bot
 protection with GCP serverless function and Cloudflare worker (with Cloudflare challenge page).
 
+[[Download PL version](https://cv.miloszgilga.pl?lang=pl)] |
+[[Download EN version](https://cv.miloszgilga.pl?lang=en)]
+
 ## Commands
 
 ```sh
