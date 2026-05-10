@@ -10,7 +10,9 @@ exports.serveCV = async (req, res) => {
   if (secretHeader !== expectedToken) {
     return res.status(403).end();
   }
-  const lang = req.query.lang === 'en' ? 'en' : FALLBACK_LANG;
+  const allowedLangs = ['en', 'pl'];
+  const queryLang = req.query.lang;
+  const lang = allowedLangs.includes(queryLang) ? queryLang : FALLBACK_LANG;
   const fileName = `cv_msc_eng_miloszgilga_${lang}.pdf`;
   try {
     const options = {
